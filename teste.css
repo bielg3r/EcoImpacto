@@ -1,0 +1,209 @@
+/* ==========================================================
+   EcoImpacto — paleta: verde escuro, verde claro, bege, laranja
+   ========================================================== */
+
+   :root {
+    --verde-escuro: #1B4332;
+    --verde-escuro-2: #2D6A4F;
+    --verde-claro: #95D5B2;
+    --verde-claro-2: #74C69D;
+    --bege: #F5F1E4;
+    --bege-claro: #FAF6EC;
+    --laranja: #F77F00;
+    --laranja-escuro: #D66600;
+    --texto: #1E2A22;
+    --branco: #FFFFFF;
+    --sombra: 0 4px 14px rgba(27, 67, 50, 0.12);
+  }
+  
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: var(--bege-claro);
+    color: var(--texto);
+    line-height: 1.6;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  /* ===================== HEADER / NAV ===================== */
+  
+  header {
+    background-color: var(--verde-escuro);
+    box-shadow: var(--sombra);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+  }
+  
+  nav {
+    max-width: 1100px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 1.5rem;
+  }
+  
+  .logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: var(--bege);
+    letter-spacing: 0.5px;
+  }
+  
+  .menu {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+  }
+  
+  .menu li a {
+    color: var(--verde-claro);
+    font-weight: 500;
+    padding: 0.4rem 0.2rem;
+    border-bottom: 2px solid transparent;
+    transition: color 0.25s ease, border-color 0.25s ease;
+  }
+  
+  .menu li a:hover,
+  .menu li a:focus {
+    color: var(--laranja);
+    border-color: var(--laranja);
+  }
+  
+  /* ===================== HERO ===================== */
+  
+  .hero {
+    background: linear-gradient(135deg, var(--verde-escuro) 0%, var(--verde-escuro-2) 100%);
+    color: var(--bege-claro);
+    text-align: center;
+    padding: 5rem 1.5rem;
+  }
+  
+  .hero h1 {
+    font-size: 2.6rem;
+    margin-bottom: 1.2rem;
+    color: var(--branco);
+  }
+  
+  .hero p {
+    max-width: 640px;
+    margin: 0 auto 2rem;
+    font-size: 1.1rem;
+    color: var(--verde-claro);
+  }
+  
+  .btn {
+    display: inline-block;
+    background-color: var(--laranja);
+    color: var(--branco);
+    font-weight: 700;
+    padding: 0.9rem 2.2rem;
+    border-radius: 40px;
+    box-shadow: 0 6px 16px rgba(247, 127, 0, 0.4);
+    transition: background-color 0.25s ease, transform 0.25s ease;
+  }
+  
+  .btn:hover,
+  .btn:focus {
+    background-color: var(--laranja-escuro);
+    transform: translateY(-3px);
+  }
+  
+  /* ===================== CONTAINER / SECTIONS ===================== */
+  
+  .container {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 4rem 1.5rem;
+  }
+  
+  .section-title {
+    text-align: center;
+    font-size: 2rem;
+    color: var(--verde-escuro);
+    margin-bottom: 3rem;
+    position: relative;
+  }
+  
+  .section-title::after {
+    content: "";
+    display: block;
+    width: 70px;
+    height: 4px;
+    background-color: var(--laranja);
+    margin: 0.8rem auto 0;
+    border-radius: 2px;
+  }
+  
+  /* ===================== CARDS ===================== */
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+  }
+  
+  .card {
+    background-color: var(--bege);
+    border-top: 4px solid var(--verde-claro-2);
+    border-radius: 12px;
+    padding: 2rem 1.5rem;
+    text-align: center;
+    box-shadow: var(--sombra);
+    transition: transform 0.25s ease, border-color 0.25s ease;
+  }
+  
+  .card:hover {
+    transform: translateY(-6px);
+    border-top-color: var(--laranja);
+  }
+  
+  .card h3 {
+    color: var(--verde-escuro);
+    font-size: 1.25rem;
+    margin-bottom: 0.8rem;
+  }
+  
+  .card p {
+    color: var(--texto);
+    font-size: 0.98rem;
+  }
+  
+  /* ===================== FOOTER ===================== */
+  
+  footer {
+    background-color: var(--verde-escuro);
+    color: var(--verde-claro);
+    text-align: center;
+    padding: 1.5rem;
+    font-size: 0.9rem;
+  }
+  
+  /* ===================== RESPONSIVO ===================== */
+  
+  @media (max-width: 640px) {
+    nav {
+      flex-direction: column;
+      gap: 1rem;
+    }
+  
+    .menu {
+      gap: 1.2rem;
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  
+    .hero h1 {
+      font-size: 2rem;
+    }
+  }
