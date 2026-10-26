@@ -107,7 +107,7 @@ O projeto será considerado concluído quando atender aos seguintes critérios:
 
 **Responsável pela validação:** Paulo Sergio Fratta Junior
 
-**Data de aprovação:**Data de aprovação: ___ /____/___
+**Data de aprovação:**Data de aprovação: 
 
 *EcoImpacto – Sustentabilidade em Ação*
 
