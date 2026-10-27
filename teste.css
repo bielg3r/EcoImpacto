@@ -60,10 +60,13 @@
     letter-spacing: 0.5px;
   }
   
+  /* Permite acomodar os links das páginas sem ultrapassar o cabeçalho. */
   .menu {
     list-style: none;
     display: flex;
-    gap: 2rem;
+    gap: 0.75rem 1rem;
+    flex-wrap: wrap;
+    justify-content: flex-end;
   }
   
   .menu li a {
@@ -77,6 +80,12 @@
   .menu li a:hover,
   .menu li a:focus {
     color: var(--laranja);
+    border-color: var(--laranja);
+  }
+
+  /* Destaca visualmente a página ativa no menu compartilhado. */
+  .menu li a[aria-current="page"] {
+    color: var(--branco);
     border-color: var(--laranja);
   }
   
@@ -178,6 +187,119 @@
     color: var(--texto);
     font-size: 0.98rem;
   }
+
+  /* Links de navegação exibidos dentro dos cartões da página inicial. */
+  .card .text-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--verde-escuro-2);
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Estilos comuns aos títulos e introduções das páginas internas. */
+  .page-heading {
+    margin-bottom: 2rem;
+    text-align: center;
+  }
+
+  .page-heading h1 {
+    margin-bottom: 0.5rem;
+    color: var(--verde-escuro);
+    font-size: 2.3rem;
+  }
+
+  .page-heading p {
+    max-width: 720px;
+    margin: 0 auto;
+  }
+
+  .content-panel {
+    margin: 2rem 0;
+  }
+
+  .content-panel h2 {
+    margin-bottom: 1rem;
+    color: var(--verde-escuro);
+  }
+
+  .content-panel > p + h2 {
+    margin-top: 2rem;
+  }
+
+  /* Layout dos grupos e do resultado interativo do checklist. */
+  .checklist-form {
+    max-width: 800px;
+    margin: 0 auto;
+  }
+
+  .checklist-group {
+    display: grid;
+    gap: 0.8rem;
+    margin-bottom: 1.5rem;
+    padding: 1.5rem;
+    border: 1px solid var(--verde-claro-2);
+    border-radius: 12px;
+    background: var(--bege);
+  }
+
+  .checklist-group legend {
+    padding: 0 0.4rem;
+    color: var(--verde-escuro);
+    font-size: 1.15rem;
+    font-weight: 700;
+  }
+
+  .checklist-group label {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.65rem;
+  }
+
+  .checklist-group input {
+    width: 1.1rem;
+    height: 1.1rem;
+    margin-top: 0.25rem;
+    accent-color: var(--verde-escuro-2);
+  }
+
+  .result-panel {
+    padding: 1.5rem;
+    border-left: 4px solid var(--laranja);
+    border-radius: 8px;
+    background: var(--bege);
+  }
+
+  /* Espaçamento da lista de integrantes da equipe. */
+  .team-list {
+    margin: 0 0 2rem 1.25rem;
+  }
+
+  /* Grade e ilustrações visuais da página de galeria. */
+  .gallery-cards {
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  }
+
+  .gallery-art {
+    display: grid;
+    min-height: 150px;
+    margin-bottom: 1.25rem;
+    place-items: center;
+    border-radius: 8px;
+    font-size: 3rem;
+  }
+
+  /* Cores das ilustrações temáticas da galeria. */
+  .nature-art { background: #d8f3dc; }
+  .challenge-art { background: #dbeafe; }
+  .action-art { background: #fef3c7; }
+  .community-art { background: #fce7f3; }
+
+  .gallery-note {
+    margin-top: 1.5rem;
+    text-align: center;
+  }
   
   /* ===================== FOOTER ===================== */
   
@@ -205,5 +327,10 @@
   
     .hero h1 {
       font-size: 2rem;
+    }
+
+    /* Mantém os títulos das páginas legíveis em telas estreitas. */
+    .page-heading h1 {
+      font-size: 1.9rem;
     }
   }
