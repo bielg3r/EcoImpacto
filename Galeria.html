@@ -3,33 +3,51 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Temas visuais para conhecer a natureza, os desafios ambientais e as ações sustentáveis.">
+  <meta name="description" content="Imagens que representam atitudes sustentáveis do nosso dia a dia.">
   <title>EcoImpacto | Galeria</title>
   <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
 </head>
 <body>
-  <!-- Navegação compartilhada entre as páginas do EcoImpacto. -->
-  <header><nav aria-label="Navegação principal">
-    <a class="logo" href="index.html">EcoImpacto</a>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li>
-      <li><a href="check_list.html">Checklist</a></li><li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
-      <li><a href="Projetos_Sustentáveis.html">Projetos</a></li><li><a href="Galeria.html" aria-current="page">Galeria</a></li>
-      <li><a href="Mídia.html">Mídia</a></li><li><a href="Notícias.html">Notícias</a></li>
-      <li><a href="contato.html">Contato</a></li><li><a href="orcamento_hospedagem.html">Infraestrutura</a></li>
-    </ul>
-  </nav></header>
-  <main class="container">
-    <!-- Galeria de temas representados por ilustrações simbólicas. -->
-    <header class="page-heading"><h1>Galeria</h1><p>Uma coleção de temas para observar diferentes relações entre natureza, sociedade e sustentabilidade.</p></header>
-    <section class="cards gallery-cards" aria-label="Temas da galeria">
-      <article class="card"><div class="gallery-art nature-art" aria-hidden="true">🌿</div><h2>Natureza preservada</h2><p>Ecossistemas, biodiversidade e espaços naturais que merecem cuidado.</p></article>
-      <article class="card"><div class="gallery-art challenge-art" aria-hidden="true">🌎</div><h2>Desafios ambientais</h2><p>Poluição, mudanças climáticas e outros desafios que pedem atenção coletiva.</p></article>
-      <article class="card"><div class="gallery-art action-art" aria-hidden="true">♻️</div><h2>Ações sustentáveis</h2><p>Hábitos e iniciativas que podem inspirar mudanças no cotidiano.</p></article>
-      <article class="card"><div class="gallery-art community-art" aria-hidden="true">🤝</div><h2>Projetos sociais</h2><p>Colaboração, inclusão e projetos que fortalecem comunidades.</p></article>
+  <!-- Menu igual ao da home; só muda o item com aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustentáveis.html">Projetos</a></li>
+        <li><a href="Galeria.html" aria-current="page">Galeria</a></li>
+        <li><a href="Mídia.html">Mídia</a></li>
+        <li><a href="Notícias.html">Notícias</a></li>
+        <li><a href="contato.html">Contato</a></li>
+        <li><a href="orcamento_hospedagem.html">Infraestrutura</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Galeria</h1>
+      <p>Imagens que representam atitudes sustentáveis do nosso dia a dia.</p>
     </section>
-    <p class="gallery-note">As ilustrações desta página são símbolos temáticos. Fotografias devem incluir legenda, texto alternativo e crédito da fonte.</p>
+    <!-- Imagens ficam na pasta img/. Para trocar por fotos, mude o nome do arquivo no src -->
+    <section class="container">
+      <h2 class="section-title">Atitudes que fazem a diferença</h2>
+      <div class="galeria">
+        <figure><img src="img/arvore.svg" alt="Árvore"><figcaption>Plantar árvores melhora o ar e o clima da cidade.</figcaption></figure>
+        <figure><img src="img/reciclagem.svg" alt="Reciclagem"><figcaption>Separar o lixo dá nova vida aos materiais.</figcaption></figure>
+        <figure><img src="img/agua.svg" alt="Gota de água"><figcaption>Cada gota economizada conta.</figcaption></figure>
+        <figure><img src="img/sol.svg" alt="Sol"><figcaption>A energia solar é limpa e renovável.</figcaption></figure>
+        <figure><img src="img/bicicleta.svg" alt="Bicicleta"><figcaption>Pedalar reduz a poluição e faz bem à saúde.</figcaption></figure>
+        <figure><img src="img/folha.svg" alt="Planta nascendo"><figcaption>Hortas e jardins aproximam a comunidade da natureza.</figcaption></figure>
+      </div>
+    </section>
+
   </main>
+
   <footer>Projeto Acadêmico UNICID - EcoImpacto 2026</footer>
 </body>
 </html>

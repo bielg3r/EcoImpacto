@@ -3,34 +3,80 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Conheça a equipe acadêmica responsável pelo projeto EcoImpacto.">
-  <title>EcoImpacto | Contato e equipe</title>
+  <meta name="description" content="Envie uma mensagem e conheça quem fez o EcoImpacto.">
+  <title>EcoImpacto | Contato e Equipe</title>
   <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
 </head>
 <body>
-  <!-- Navegação compartilhada entre as páginas do EcoImpacto. -->
-  <header><nav aria-label="Navegação principal">
-    <a class="logo" href="index.html">EcoImpacto</a>
-    <ul class="menu">
-      <li><a href="index.html">Home</a></li><li><a href="sobre.html">Sobre</a></li>
-      <li><a href="check_list.html">Checklist</a></li><li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
-      <li><a href="Projetos_Sustentáveis.html">Projetos</a></li><li><a href="Galeria.html">Galeria</a></li>
-      <li><a href="Mídia.html">Mídia</a></li><li><a href="Notícias.html">Notícias</a></li>
-      <li><a href="contato.html" aria-current="page">Contato</a></li><li><a href="orcamento_hospedagem.html">Infraestrutura</a></li>
-    </ul>
-  </nav></header>
-  <main class="container">
-    <!-- Identificação da equipe e contexto acadêmico do projeto. -->
-    <header class="page-heading"><h1>Contato e equipe</h1><p>Projeto acadêmico desenvolvido para a disciplina de Front-End para Web da UNICID.</p></header>
-    <section class="content-panel">
-      <h2>Equipe do projeto</h2>
-      <ul class="team-list"><li>Diogo Mariano França da Silva</li><li>Gabriel Rocha de Melo</li><li>Matheus Fernando Garcia de Oliveira</li></ul>
-      <h2>Informações acadêmicas</h2>
-      <p><strong>Disciplina:</strong> Front-End para Web</p>
-      <p><strong>Professor:</strong> Paulo Fratta</p>
-      <p><strong>Instituição:</strong> Universidade Cidade de São Paulo (UNICID)</p>
+  <!-- Menu igual ao da home; só muda o item com aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustentáveis.html">Projetos</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Mídia.html">Mídia</a></li>
+        <li><a href="Notícias.html">Notícias</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+        <li><a href="orcamento_hospedagem.html">Infraestrutura</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h1>Contato e Equipe</h1>
+      <p>Envie uma mensagem e conheça quem fez o EcoImpacto.</p>
     </section>
+    <!-- Formulário de contato (apenas simulação, não envia para servidor) -->
+    <section class="container">
+      <h2 class="section-title">Fale com a gente</h2>
+      <form id="form-contato">
+        <label for="c-nome">Nome</label>
+        <input id="c-nome" name="nome" type="text" required>
+        <label for="c-email">E-mail</label>
+        <input id="c-email" name="email" type="email" required>
+        <label for="c-msg">Mensagem</label>
+        <textarea id="c-msg" name="msg" rows="5" required></textarea>
+        <p><button class="btn" type="submit">Enviar</button></p>
+      </form>
+      <div id="aviso" class="resultado"></div>
+    </section>
+    <script>
+      var f = document.getElementById("form-contato");
+      f.onsubmit = function (e) {
+        e.preventDefault();
+        var nome = f.nome.value.trim().replace(/</g, "&lt;");
+        document.getElementById("aviso").innerHTML = "Obrigado, " + nome + "! Sua mensagem foi registrada (simulação).";
+        f.reset();
+      };
+    </script>
+    <!-- Equipe do projeto -->
+    <section class="container">
+      <h2 class="section-title">Equipe</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Diogo Mariano França da Silva</h3>
+          <p>Integrante da equipe</p>
+        </article>
+        <article class="card">
+          <h3>Gabriel Rocha de Melo</h3>
+          <p>Integrante da equipe</p>
+        </article>
+        <article class="card">
+          <h3>Matheus Fernando Garcia de Oliveira</h3>
+          <p>Integrante da equipe</p>
+        </article>
+      </div>
+    </section>
+
   </main>
+
   <footer>Projeto Acadêmico UNICID - EcoImpacto 2026</footer>
 </body>
 </html>
