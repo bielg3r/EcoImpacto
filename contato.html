@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Envie uma mensagem e conheça quem fez o EcoImpacto.">
+  <meta name="description" content="Veja como falar com a gente e conheça quem fez o EcoImpacto.">
   <title>EcoImpacto | Contato e Equipe</title>
   <link rel="stylesheet" href="teste.css">
   <link rel="stylesheet" href="paginas.css">
@@ -29,33 +29,40 @@
   </header>
 
   <main>
-    <section class="hero">
-      <h1>Contato e Equipe</h1>
-      <p>Envie uma mensagem e conheça quem fez o EcoImpacto.</p>
-    </section>
-    <!-- Formulário de contato (apenas simulação, não envia para servidor) -->
+    <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
+    <div class="container">
+      <div class="page-heading">
+        <h1>Contato e Equipe</h1>
+        <p>Veja como falar com a gente e conheça quem fez o EcoImpacto.</p>
+      </div>
+    </div>
+    <!-- Informações de contato fictícias: a página só mostra dados, não envia mensagem -->
     <section class="container">
-      <h2 class="section-title">Fale com a gente</h2>
-      <form id="form-contato">
-        <label for="c-nome">Nome</label>
-        <input id="c-nome" name="nome" type="text" required>
-        <label for="c-email">E-mail</label>
-        <input id="c-email" name="email" type="email" required>
-        <label for="c-msg">Mensagem</label>
-        <textarea id="c-msg" name="msg" rows="5" required></textarea>
-        <p><button class="btn" type="submit">Enviar</button></p>
-      </form>
-      <div id="aviso" class="resultado"></div>
+      <h2 class="section-title">Informações de contato</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>E-mail</h3>
+          <p>contato@ecoimpacto.com</p>
+        </article>
+        <article class="card">
+          <h3>Telefone</h3>
+          <p>(11) 4000-0000</p>
+        </article>
+        <article class="card">
+          <h3>Endereço</h3>
+          <p>Rua das Árvores, 123 - São Paulo, SP</p>
+        </article>
+        <article class="card">
+          <h3>Horário de atendimento</h3>
+          <p>Segunda a sexta, das 9h às 17h</p>
+        </article>
+        <article class="card">
+          <h3>Redes sociais</h3>
+          <p>@ecoimpacto</p>
+        </article>
+      </div>
+      <p class="gallery-note">Dados fictícios, criados para o trabalho acadêmico.</p>
     </section>
-    <script>
-      var f = document.getElementById("form-contato");
-      f.onsubmit = function (e) {
-        e.preventDefault();
-        var nome = f.nome.value.trim().replace(/</g, "&lt;");
-        document.getElementById("aviso").innerHTML = "Obrigado, " + nome + "! Sua mensagem foi registrada (simulação).";
-        f.reset();
-      };
-    </script>
     <!-- Equipe do projeto -->
     <section class="container">
       <h2 class="section-title">Equipe</h2>
