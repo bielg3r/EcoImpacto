@@ -42,7 +42,6 @@ O projeto contará com as seguintes páginas e seções:
 - Mídia
 - Notícias
 - Contato e Equipe
-- Infraestrutura Sustentável
 
 ## Requisitos Não Funcionais
 
@@ -58,7 +57,7 @@ O desenvolvimento do site deverá considerar os seguintes requisitos:
 
 A estrutura de navegação seguirá a sequência abaixo:
 
-Home → Sobre → Checklist Sustentável → Impacto Ambiental e Social → Projetos Sustentáveis → Galeria → Mídia → Notícias → Contato e Equipe → Infraestrutura Sustentável.
+Home → Sobre → Checklist Sustentável → Impacto Ambiental e Social → Projetos Sustentáveis → Galeria → Mídia → Notícias → Contato e Equipe.
 
 ## Conteúdo e Identidade Visual
 
