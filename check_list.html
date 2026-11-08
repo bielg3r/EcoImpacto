@@ -1,1 +1,117 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Responda 5 perguntas rápidas e receba dicas para melhorar seus hábitos.">
+  <title>EcoImpacto | Checklist Sustentável</title>
+  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+  <!-- Menu igual ao da home; só muda o item com aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html" aria-current="page">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustententaveis.html">Projetos</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Midia.html">Mídia</a></li>
+        <li><a href="Noticias.html">Notícias</a></li>
+        <li><a href="pontos_de_coleta.html">Coleta</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
 
+  <main>
+    <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
+    <div class="container">
+      <div class="page-heading">
+        <h1>Checklist Sustentável</h1>
+        <p>Responda 5 perguntas rápidas e receba dicas para melhorar seus hábitos.</p>
+      </div>
+    </div>
+    <!-- Checklist: 5 perguntas, cada resposta (0, 1 ou 2) tem uma dica pronta -->
+    <section class="container">
+      <h2 class="section-title">Responda e receba dicas</h2>
+      <form id="form-check">
+        <label for="nome">Qual é o seu nome?</label>
+        <input id="nome" name="nome" type="text" required>
+        <label for="p0">1. Como você se desloca no dia a dia?</label>
+        <select id="p0" name="p0" required><option value="">Escolha...</option><option value="0">Carro ou moto, quase sempre sozinho(a)</option><option value="1">Transporte público ou carona</option><option value="2">Bicicleta ou a pé</option></select>
+        <label for="p1">2. O que você faz com o lixo de casa?</label>
+        <select id="p1" name="p1" required><option value="">Escolha...</option><option value="0">Jogo tudo junto</option><option value="1">Separo às vezes</option><option value="2">Separo sempre</option></select>
+        <label for="p2">3. Como é o seu uso de água?</label>
+        <select id="p2" name="p2" required><option value="">Escolha...</option><option value="0">Banhos longos e torneira aberta</option><option value="1">Tento economizar quando lembro</option><option value="2">Cuido sempre (banho curto, torneira fechada)</option></select>
+        <label for="p3">4. E a energia elétrica?</label>
+        <select id="p3" name="p3" required><option value="">Escolha...</option><option value="0">Deixo luzes e aparelhos ligados</option><option value="1">Apago as luzes quando lembro</option><option value="2">Apago tudo e uso lâmpadas LED</option></select>
+        <label for="p4">5. Como você consome (compras e comida)?</label>
+        <select id="p4" name="p4" required><option value="">Escolha...</option><option value="0">Compro sem planejar e uso muito descartável</option><option value="1">Às vezes levo sacola e evito desperdício</option><option value="2">Planejo, reutilizo e evito desperdício</option></select>
+        <p><button class="btn" type="submit">Ver minhas dicas</button> <button type="reset">Limpar</button></p>
+      </form>
+      <div id="resultado" class="resultado"></div>
+    </section>
+
+    <script>
+      // dicas[pergunta][resposta]: mensagens prontas; resposta 2 = melhor hábito
+      var dicas = [
+  [
+    "Tente trocar 1 ou 2 trajetos por semana por ônibus, metrô ou carona solidária: sai mais barato e emite menos CO₂.",
+    "Bom uso do transporte coletivo! Nos trajetos curtos, que tal ir a pé ou de bicicleta?",
+    "Excelente! Seu deslocamento já é de baixo impacto. Incentive amigos a fazerem o mesmo."
+  ],
+  [
+    "Comece simples: use duas lixeiras, uma para recicláveis (papel, plástico, vidro e metal) e outra para o resto.",
+    "Você já separa às vezes. Deixe a lixeira de recicláveis em um lugar fácil para virar hábito.",
+    "Muito bom separar sempre! O próximo passo é fazer compostagem com os restos de comida."
+  ],
+  [
+    "Reduzir o banho em 2 minutos e fechar a torneira ao escovar os dentes já faz muita diferença.",
+    "Falta pouco: deixe um lembrete no banheiro e conserte vazamentos, que desperdiçam muita água.",
+    "Ótimo! Que tal reaproveitar a água da chuva ou da máquina de lavar para limpar quintais e calçadas?"
+  ],
+  [
+    "Apague as luzes ao sair do cômodo e tire carregadores da tomada: a conta e o planeta agradecem.",
+    "Crie o hábito de desligar da tomada o que não está em uso, pois o stand-by também consome energia.",
+    "Parabéns! Para ir além, prefira aparelhos com selo Procel de eficiência e pesquise sobre energia solar."
+  ],
+  [
+    "Antes de comprar, pergunte: preciso mesmo? Leve sua sacola e troque copos e canudos descartáveis por reutilizáveis.",
+    "Você já tem boas atitudes. Faça lista de compras para não desperdiçar comida e prefira produtos duráveis.",
+    "Excelente! Continue reutilizando e comprando de produtores locais, que reduzem o impacto do transporte."
+  ]
+];
+      var form = document.getElementById("form-check");
+      var res = document.getElementById("resultado");
+
+      form.onsubmit = function (e) {
+        e.preventDefault();
+        var nome = form.nome.value.trim().replace(/</g, "&lt;");
+        var melhorar = "", bom = "", pontos = 0;
+        for (var i = 0; i < dicas.length; i++) {
+          var r = Number(form["p" + i].value);
+          var li = "<li>" + dicas[i][r] + "</li>";
+          if (r == 2) { bom += li; pontos++; } else { melhorar += li; }
+        }
+        var nivel = pontos >= 4 ? "Parabéns, seu dia a dia já é bem sustentável!" :
+                    pontos >= 2 ? "Você já está no caminho certo!" :
+                    "Você está começando, e esse é o primeiro passo!";
+        var h = "<h3>Olá, " + nome + "! " + nivel + "</h3><p>Você já tem " + pontos + " de 5 hábitos sustentáveis.</p>";
+        if (melhorar) h += "<h4>Pontos para melhorar</h4><ul>" + melhorar + "</ul>";
+        if (bom) h += "<h4>Continue assim</h4><ul>" + bom + "</ul>";
+        res.innerHTML = h;
+        res.scrollIntoView();
+      };
+      form.onreset = function () { res.innerHTML = ""; };
+    </script>
+
+  </main>
+
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026</footer>
+</body>
+</html>
