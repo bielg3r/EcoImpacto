@@ -28,3 +28,20 @@ th { color: var(--branco); background: var(--verde-escuro-2); }
 .galeria figcaption { margin-top: 0.6rem; color: var(--texto-suave); font-size: 0.95rem; }
 iframe { display: block; width: 100%; max-width: 760px; aspect-ratio: 16 / 9; margin: 1rem auto; border: 0; border-radius: 16px; box-shadow: var(--sombra); }
 .card p { overflow-wrap: anywhere; }
+
+/* ---------- Validação do formulário de contato (usado por script.js) ---------- */
+form textarea { min-height: 120px; resize: vertical; }
+input.invalido, select.invalido, textarea.invalido { border: 2px solid #B3261E; background: #FFF4F2; }
+.msg-erro { display: block; margin-top: 0.3rem; color: #B3261E; font-size: 0.92rem; font-weight: 600; }
+.msg-erro:empty { display: none; }
+.contador { display: block; margin-top: 0.2rem; text-align: right; color: var(--texto-suave); font-size: 0.85rem; }
+.aviso-rascunho { margin: 0 0 0.5rem; color: var(--verde-escuro-2); font-weight: 700; }
+.aviso-rascunho:empty { display: none; }
+#status-envio:focus, #titulo-historico:focus { outline: 3px solid var(--laranja); outline-offset: 4px; }
+
+/* Histórico de mensagens salvas no localStorage */
+.container ul.historico { display: grid; gap: 1rem; max-width: 800px; margin: 1.5rem auto; list-style: none; }
+.item-historico { padding: 1.2rem 1.4rem; background: var(--branco); border: 1px solid var(--borda); border-left: 5px solid var(--verde-claro-2); border-radius: 14px; box-shadow: var(--sombra); }
+.item-historico h3 { margin-bottom: 0.4rem; color: var(--verde-escuro); font-size: 1.05rem; }
+.item-historico .detalhes { color: var(--texto-suave); font-size: 0.9rem; }
+.acoes-historico { text-align: center; }
