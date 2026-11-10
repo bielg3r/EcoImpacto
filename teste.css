@@ -496,3 +496,190 @@
       transition-duration: 0.01ms !important;
     }
   }
+
+  /* ===================== BOTÃO FLUTUANTE DE ACESSIBILIDADE ===================== */
+  /* Montado por acessibilidade.js. Para mudar de lugar, altere right/bottom abaixo. */
+
+  .acess-widget {
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    z-index: 300;
+    display: flex;
+    flex-direction: column-reverse; /* painel aparece acima do botão, mas o Tab vai do botão para o painel */
+    align-items: flex-end;
+    gap: 0.7rem;
+  }
+
+  .acess-botao {
+    display: grid;
+    place-items: center;
+    width: 3.5rem;
+    height: 3.5rem;
+    padding: 0;
+    color: var(--branco);
+    background-color: var(--verde-escuro);
+    border: 3px solid var(--branco);
+    border-radius: 50%;
+    box-shadow: var(--sombra-forte);
+    cursor: pointer;
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+
+  .acess-botao:hover {
+    background-color: var(--verde-escuro-2);
+    transform: scale(1.06);
+  }
+
+  /* Anel branco + anel laranja: o foco aparece tanto em fundo claro quanto escuro */
+  .acess-botao:focus-visible,
+  .acess-opcao:focus-visible,
+  .acess-pagina:focus-visible {
+    outline: 3px solid var(--laranja-botao);
+    outline-offset: 3px;
+    box-shadow: 0 0 0 3px var(--branco);
+  }
+
+  .acess-painel {
+    width: 18rem;
+    max-width: calc(100vw - 2rem);
+    max-height: calc(100vh - 6.5rem);
+    overflow-y: auto;
+    display: grid;
+    gap: 0.6rem;
+    padding: 1rem;
+    background-color: var(--branco);
+    color: var(--texto);
+    border: 1px solid var(--borda);
+    border-radius: var(--raio);
+    box-shadow: var(--sombra-forte);
+  }
+
+  .acess-painel[hidden] {
+    display: none;
+  }
+
+  .acess-titulo {
+    color: var(--verde-escuro);
+    font-size: 1.05rem;
+    font-weight: 700;
+  }
+
+  .acess-linha {
+    display: grid;
+    grid-template-columns: 3rem 1fr 3rem;
+    align-items: center;
+    gap: 0.5rem;
+  }
+
+  .acess-nivel {
+    text-align: center;
+    color: var(--texto);
+    font-size: 0.95rem;
+    font-weight: 600;
+  }
+
+  .acess-opcao {
+    min-height: 2.75rem;
+    padding: 0.5rem 0.9rem;
+    font: inherit;
+    font-weight: 700;
+    color: var(--verde-escuro);
+    background-color: var(--branco);
+    border: 2px solid var(--verde-escuro-2);
+    border-radius: 12px;
+    cursor: pointer;
+  }
+
+  .acess-opcao:hover {
+    background-color: var(--bege);
+  }
+
+  .acess-opcao:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+  }
+
+  /* Opção ligada: fundo verde escuro (além da cor, o aria-pressed informa o leitor de tela) */
+  .acess-opcao[aria-pressed="true"] {
+    color: var(--branco);
+    background-color: var(--verde-escuro);
+  }
+
+  .acess-pagina {
+    color: var(--verde-escuro-2);
+    font-size: 0.92rem;
+    font-weight: 700;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 0.2em;
+  }
+
+  /* Não imprime o botão */
+  @media print {
+    .acess-widget { display: none; }
+  }
+
+  /* ===================== OPÇÕES ESCOLHIDAS NO PAINEL ===================== */
+
+  /* Destacar links: sublinhado grosso em todos os links */
+  html.destacar-links a:not(.skip-link) {
+    text-decoration: underline !important;
+    text-decoration-thickness: 3px !important;
+    text-underline-offset: 0.2em !important;
+    font-weight: 700;
+  }
+
+  /* Alto contraste: fundo preto, texto branco, links e títulos amarelos */
+  /* :where() zera a especificidade, para os ajustes abaixo (botões, links) poderem sobrescrever */
+  html.alto-contraste :where(*:not(.cor):not(img):not(iframe):not(svg):not(path):not(circle)),
+  html.alto-contraste *::before,
+  html.alto-contraste *::after {
+    background-color: #000 !important;
+    background-image: none !important;
+    color: #fff !important;
+    border-color: #fff !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+  }
+
+  html.alto-contraste h1,
+  html.alto-contraste h2,
+  html.alto-contraste h3,
+  html.alto-contraste h4,
+  html.alto-contraste .logo,
+  html.alto-contraste summary,
+  html.alto-contraste legend {
+    color: #FFEB3B !important;
+  }
+
+  html.alto-contraste a {
+    color: #FFEB3B !important;
+    text-decoration: underline !important;
+  }
+
+  html.alto-contraste .btn,
+  html.alto-contraste button.btn,
+  html.alto-contraste .acess-botao {
+    background-color: #FFEB3B !important;
+    color: #000 !important;
+    border-color: #FFEB3B !important;
+  }
+
+  html.alto-contraste .acess-botao svg {
+    color: #000 !important;
+  }
+
+  html.alto-contraste .acess-opcao[aria-pressed="true"] {
+    background-color: #FFEB3B !important;
+    color: #000 !important;
+  }
+
+  html.alto-contraste :focus-visible {
+    outline: 3px solid #00E5FF !important;
+    outline-offset: 3px;
+  }
+
+  html.alto-contraste .menu li a[aria-current="page"] {
+    border-bottom: 3px solid #FFEB3B !important;
+  }
