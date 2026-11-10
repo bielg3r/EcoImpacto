@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Veja os recursos de acessibilidade do EcoImpacto, como navegar pelo teclado e como relatar um problema.">
+  <title>EcoImpacto | Acessibilidade</title>
+  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+  <!-- Acessibilidade: link que aparece ao apertar Tab e leva direto ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Menu igual ao das outras páginas. Esta página é acessada pelo link do rodapé, por isso nenhum item do menu tem aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustententaveis.html">Projetos</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Midia.html">Mídia</a></li>
+        <li><a href="Noticias.html">Notícias</a></li>
+        <li><a href="pontos_de_coleta.html">Coleta</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
+    <div class="container">
+      <div class="page-heading">
+        <h1>Acessibilidade</h1>
+        <p>O EcoImpacto foi pensado para ser usado por todas as pessoas, inclusive quem navega só pelo teclado ou usa leitor de tela.</p>
+      </div>
+    </div>
+
+    <!-- Recursos que o site já tem -->
+    <section class="container">
+      <h2 class="section-title">Recursos do site</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Navegação pelo teclado</h3>
+          <p>Todos os links, botões e campos funcionam sem mouse. O elemento em foco recebe um contorno bem visível.</p>
+        </article>
+        <article class="card">
+          <h3>Pular para o conteúdo</h3>
+          <p>Em todas as páginas, o primeiro Tab mostra o link "Pular para o conteúdo", que ignora o menu e vai direto ao texto.</p>
+        </article>
+        <article class="card">
+          <h3>Leitores de tela</h3>
+          <p>Usamos HTML semântico (cabeçalho, menu, conteúdo principal e rodapé), títulos em ordem, texto alternativo nas imagens e título no vídeo.</p>
+        </article>
+        <article class="card">
+          <h3>Formulários claros</h3>
+          <p>Cada campo tem rótulo visível. No contato, os erros aparecem em texto, não só em cor, e são anunciados pelo leitor de tela.</p>
+        </article>
+        <article class="card">
+          <h3>Resultado do checklist</h3>
+          <p>As dicas do checklist são anunciadas automaticamente por leitores de tela assim que aparecem (região aria-live).</p>
+        </article>
+        <article class="card">
+          <h3>Contraste e movimento</h3>
+          <p>Textos e botões seguem o contraste mínimo do nível AA. Quem ativa "reduzir movimento" no sistema vê as transições reduzidas.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Como navegar -->
+    <section class="container">
+      <h2 class="section-title">Como navegar pelo teclado</h2>
+      <ul>
+        <li><strong>Tab</strong>: vai para o próximo link, botão ou campo.</li>
+        <li><strong>Shift + Tab</strong>: volta para o item anterior.</li>
+        <li><strong>Enter</strong>: abre um link ou envia o formulário.</li>
+        <li><strong>Espaço</strong>: aperta um botão ou marca uma opção.</li>
+        <li><strong>Setas para cima e para baixo</strong>: escolhem uma opção nas listas de seleção.</li>
+        <li><strong>Ctrl + (+) ou Ctrl + (-)</strong>: aumenta ou diminui o tamanho do texto. O site usa medidas relativas, então o texto cresce junto.</li>
+      </ul>
+    </section>
+
+    <!-- Contraste medido (mesma conta do WCAG: razão entre as luminâncias das duas cores) -->
+    <section class="container">
+      <h2 class="section-title">Contraste das cores principais</h2>
+      <p>O padrão WCAG 2.1, nível AA, pede pelo menos 4,5:1 para textos normais e 3:1 para o contorno de foco. Medimos as combinações mais usadas no site:</p>
+      <div class="tabela-rolagem">
+        <table>
+          <caption>Razão de contraste das combinações de cor do site</caption>
+          <thead>
+            <tr><th scope="col">Combinação</th><th scope="col">Cores</th><th scope="col">Contraste</th></tr>
+          </thead>
+          <tbody>
+            <tr><td>Texto principal no fundo</td><td>#1E2A22 sobre #FAF6EC</td><td>13,8:1</td></tr>
+            <tr><td>Texto secundário no fundo</td><td>#53645A sobre #FAF6EC</td><td>5,8:1</td></tr>
+            <tr><td>Botão laranja (texto branco)</td><td>#FFFFFF sobre #B34700</td><td>5,5:1</td></tr>
+            <tr><td>Botão laranja ao passar o mouse</td><td>#FFFFFF sobre #8F3900</td><td>7,6:1</td></tr>
+            <tr><td>Links verdes</td><td>#2D6A4F sobre #FFFFFF</td><td>6,4:1</td></tr>
+            <tr><td>Mensagem de erro</td><td>#B3261E sobre #FFFFFF</td><td>6,5:1</td></tr>
+            <tr><td>Menu (cabeçalho)</td><td>#E8F3EC sobre #163528</td><td>11,7:1</td></tr>
+            <tr><td>Contorno de foco nas áreas claras</td><td>#B34700 sobre #FAF6EC</td><td>5,1:1</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Limitações: dizemos o que ainda não está perfeito -->
+    <section class="container">
+      <h2 class="section-title">O que ainda pode melhorar</h2>
+      <p>Buscamos seguir o WCAG 2.1 nível AA, mas ainda não fizemos uma auditoria completa com usuários e leitores de tela. Alguns pontos conhecidos:</p>
+      <ul>
+        <li>As fotos da Galeria e da Mídia vêm do Wikimedia Commons e precisam de internet. Se uma não carregar, aparece uma ilustração no lugar.</li>
+        <li>O vídeo da Mídia é do YouTube; os recursos dele (legendas, velocidade) dependem do player.</li>
+        <li>Os links para sites externos (notícias, mapas) abrem em outra aba e seguem a acessibilidade de cada site.</li>
+      </ul>
+    </section>
+
+    <!-- Contato para relatar problemas -->
+    <section class="container">
+      <h2 class="section-title">Encontrou uma barreira?</h2>
+      <p>Se algo não funcionou bem para você, conte pela página de <a class="text-link" href="contato.html">Contato</a> ou escreva para contato@ecoimpacto.com (e-mail fictício, criado para o trabalho acadêmico). Informe a página, o problema e o recurso que você usa, como leitor de tela ou só teclado.</p>
+      <p>Esta declaração foi atualizada em 09/11/2026.</p>
+    </section>
+
+  </main>
+
+  <!-- aria-current marca esta página como a atual no rodapé -->
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026 | <a href="acessibilidade.html" aria-current="page">Acessibilidade</a></footer>
+</body>
+</html>

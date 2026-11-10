@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Fale com a equipe do EcoImpacto, ofereça-se como voluntário(a) ou proponha uma parceria ou doação.">
+  <title>EcoImpacto | Contato e Equipe</title>
+  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
+  <!-- JavaScript externo: validação, rascunho e histórico do formulário -->
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Acessibilidade: link que aparece ao apertar Tab e leva direto ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Menu igual ao da home; só muda o item com aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustententaveis.html">Projetos</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Midia.html">Mídia</a></li>
+        <li><a href="Noticias.html">Notícias</a></li>
+        <li><a href="pontos_de_coleta.html">Coleta</a></li>
+        <li><a href="contato.html" aria-current="page">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
+    <div class="container">
+      <div class="page-heading">
+        <h1>Contato e Equipe</h1>
+        <p>Fale com a gente, ofereça-se como voluntário(a) ou proponha uma parceria ou doação.</p>
+      </div>
+    </div>
+
+    <!-- Formulário: a validação é feita em script.js (novalidate desliga as mensagens nativas do navegador) -->
+    <section class="container">
+      <h2 class="section-title">Envie sua mensagem</h2>
+      <form id="form-contato" novalidate>
+        <p id="aviso-rascunho" class="aviso-rascunho" role="status"></p>
+
+        <label for="nome">Nome completo</label>
+        <input id="nome" name="nome" type="text" autocomplete="name" required aria-describedby="erro-nome">
+        <span class="msg-erro" id="erro-nome" aria-live="polite"></span>
+
+        <label for="email">E-mail</label>
+        <input id="email" name="email" type="email" autocomplete="email" required aria-describedby="erro-email">
+        <span class="msg-erro" id="erro-email" aria-live="polite"></span>
+
+        <label for="telefone">Telefone com DDD (opcional)</label>
+        <input id="telefone" name="telefone" type="tel" autocomplete="tel" inputmode="tel" placeholder="(11) 91234-5678" aria-describedby="erro-telefone">
+        <span class="msg-erro" id="erro-telefone" aria-live="polite"></span>
+
+        <label for="assunto">Assunto</label>
+        <select id="assunto" name="assunto" required aria-describedby="erro-assunto">
+          <option value="">Escolha...</option>
+          <option value="contato">Contato geral</option>
+          <option value="voluntariado">Quero ser voluntário(a)</option>
+          <option value="parceria">Parceria ou doação</option>
+        </select>
+        <span class="msg-erro" id="erro-assunto" aria-live="polite"></span>
+
+        <!-- Aparece só para voluntariado e parceria/doação (controlado por script.js) -->
+        <div id="extra-bloco" hidden>
+          <label for="extra" id="extra-label">Detalhe</label>
+          <input id="extra" name="extra" type="text" aria-describedby="erro-extra">
+          <span class="msg-erro" id="erro-extra" aria-live="polite"></span>
+        </div>
+
+        <label for="mensagem">Mensagem</label>
+        <textarea id="mensagem" name="mensagem" rows="5" maxlength="500" required aria-describedby="erro-mensagem contador"></textarea>
+        <span class="msg-erro" id="erro-mensagem" aria-live="polite"></span>
+        <span class="contador" id="contador">0/500</span>
+
+        <p>
+          <button class="btn" type="submit">Enviar mensagem</button>
+          <button type="reset">Limpar</button>
+        </p>
+      </form>
+      <div id="status-envio" class="resultado" role="status" aria-live="polite" tabindex="-1"></div>
+    </section>
+
+    <!-- Histórico guardado no localStorage deste navegador -->
+    <section class="container" aria-labelledby="titulo-historico">
+      <h2 class="section-title" id="titulo-historico" tabindex="-1">Mensagens salvas neste navegador</h2>
+      <p class="gallery-note">As mensagens enviadas ficam guardadas só no seu navegador (localStorage). Nada é enviado a terceiros.</p>
+      <ul id="lista-historico" class="historico"></ul>
+      <p id="historico-vazio" class="gallery-note">Nenhuma mensagem enviada ainda.</p>
+      <p class="acoes-historico"><button type="button" id="limpar-historico" hidden>Apagar histórico</button></p>
+    </section>
+
+    <!-- Informações de contato fictícias -->
+    <section class="container">
+      <h2 class="section-title">Informações de contato</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>E-mail</h3>
+          <p>contato@ecoimpacto.com</p>
+        </article>
+        <article class="card">
+          <h3>Telefone</h3>
+          <p>(11) 4000-0000</p>
+        </article>
+        <article class="card">
+          <h3>Endereço</h3>
+          <p>Rua das Árvores, 123 - São Paulo, SP</p>
+        </article>
+        <article class="card">
+          <h3>Horário de atendimento</h3>
+          <p>Segunda a sexta, das 9h às 17h</p>
+        </article>
+        <article class="card">
+          <h3>Redes sociais</h3>
+          <p>@ecoimpacto</p>
+        </article>
+      </div>
+      <p class="gallery-note">Dados fictícios, criados para o trabalho acadêmico.</p>
+    </section>
+
+    <!-- Equipe do projeto -->
+    <section class="container">
+      <h2 class="section-title">Equipe</h2>
+      <div class="cards">
+        <article class="card">
+          <h3>Diogo Mariano França da Silva</h3>
+          <p>Integrante da equipe</p>
+        </article>
+        <article class="card">
+          <h3>Gabriel Rocha de Melo</h3>
+          <p>Integrante da equipe</p>
+        </article>
+        <article class="card">
+          <h3>Matheus Fernando Garcia de Oliveira</h3>
+          <p>Integrante da equipe</p>
+        </article>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026 | <a href="acessibilidade.html">Acessibilidade</a></footer>
+</body>
+</html>

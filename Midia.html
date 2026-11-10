@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vídeo e imagens para entender e compartilhar a causa.">
+  <title>EcoImpacto | Mídia</title>
+  <link rel="stylesheet" href="teste.css">
+  <link rel="stylesheet" href="paginas.css">
+</head>
+<body>
+  <!-- Acessibilidade: link que aparece ao apertar Tab e leva direto ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
+  <!-- Menu igual ao da home; só muda o item com aria-current -->
+  <header>
+    <nav aria-label="Navegação principal">
+      <a class="logo" href="index.html">EcoImpacto</a>
+      <ul class="menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="sobre.html">Sobre</a></li>
+        <li><a href="check_list.html">Checklist</a></li>
+        <li><a href="Impacto_Ambiental_e_Social.html">Impacto</a></li>
+        <li><a href="Projetos_Sustententaveis.html">Projetos</a></li>
+        <li><a href="Galeria.html">Galeria</a></li>
+        <li><a href="Midia.html" aria-current="page">Mídia</a></li>
+        <li><a href="Noticias.html">Notícias</a></li>
+        <li><a href="pontos_de_coleta.html">Coleta</a></li>
+        <li><a href="contato.html">Contato</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="conteudo" tabindex="-1">
+    <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
+    <div class="container">
+      <div class="page-heading">
+        <h1>Mídia</h1>
+        <p>Vídeo e imagens para entender e compartilhar a causa.</p>
+      </div>
+    </div>
+    <!-- Vídeo do YouTube em iframe -->
+    <section class="container">
+      <h2 class="section-title">Vídeo</h2>
+      <p>Vídeo do Programa das Nações Unidas para o Meio Ambiente (PNUMA): "Fazer as pazes com a natureza".</p>
+      <iframe src="https://www.youtube.com/embed/xqSaOgR5WM0" title="Fazer as pazes com a natureza (PNUMA)" allowfullscreen></iframe>
+    </section>
+    <!-- Imagens -->
+    <section class="container">
+      <h2 class="section-title">Imagens</h2>
+      <div class="galeria">
+        <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Reciclagemwolf.jpg?width=500" alt="Reciclagem no Brasil" loading="lazy" onerror="this.onerror=null;this.src='reciclagem.svg'"><figcaption>Reciclagem no Brasil: separar os materiais dá nova vida a eles. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Reciclagemwolf.jpg" target="_blank" rel="noopener">Fonte: Wikimedia Commons</a></figcaption></figure>
+        <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Sorted_waste_containers_in_Derendingen.jpg?width=500" alt="Contêineres de coleta seletiva" loading="lazy" onerror="this.onerror=null;this.src='reciclagem.svg'"><figcaption>Contêineres de coleta seletiva: cada material no seu lugar (Suíça). <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Sorted_waste_containers_in_Derendingen.jpg" target="_blank" rel="noopener">Fonte: Wikimedia Commons</a></figcaption></figure>
+        <figure><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Photovoltaikanlage.jpg?width=500" alt="Painéis solares em telhado" loading="lazy" onerror="this.onerror=null;this.src='sol.svg'"><figcaption>Painéis solares em telhado: energia limpa e renovável. <a class="text-link" href="https://commons.wikimedia.org/wiki/File:Photovoltaikanlage.jpg" target="_blank" rel="noopener">Fonte: Wikimedia Commons</a></figcaption></figure>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026 | <a href="acessibilidade.html">Acessibilidade</a></footer>
+</body>
+</html>

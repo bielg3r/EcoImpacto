@@ -8,6 +8,9 @@
   <link rel="stylesheet" href="teste.css">
 </head>
 <body>
+  <!-- Acessibilidade: link que aparece ao apertar Tab e leva direto ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
   <!-- Navegação compartilhada: cada item aponta para sua página dedicada. -->
   <header>
     <nav aria-label="Navegação principal">
@@ -27,7 +30,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <!-- A home mantém a apresentação geral e o acesso direto ao checklist. -->
     <section class="hero">
       <h1>Pequenas ações, grandes mudanças</h1>
@@ -58,6 +61,6 @@
     </section>
   </main>
 
-  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026</footer>
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026 | <a href="acessibilidade.html">Acessibilidade</a></footer>
 </body>
 </html>
