@@ -10,7 +10,7 @@ form { max-width: 800px; margin: 0 auto; padding: 1.5rem; background: var(--bran
 form label { display: block; margin: 1rem 0 0.3rem; font-weight: 700; color: var(--verde-escuro); }
 form input, form select, form textarea { width: 100%; padding: 0.6rem 0.8rem; font: inherit; color: var(--texto); background: var(--bege-claro); border: 1px solid var(--borda); border-radius: 10px; }
 button { padding: 0.7rem 1.4rem; font: inherit; font-weight: 700; cursor: pointer; color: var(--verde-escuro); background: var(--branco); border: 1px solid var(--verde-escuro-2); border-radius: 40px; }
-button.btn { color: var(--branco); background: var(--laranja-botao); border: 0; } /* laranja escuro: contraste AA com texto branco */
+button.btn { color: var(--branco); background: var(--laranja); border: 0; }
 button.btn:hover { background: var(--laranja-escuro); }
 form p { margin-top: 1.5rem; }
 
@@ -37,7 +37,7 @@ input.invalido, select.invalido, textarea.invalido { border: 2px solid #B3261E; 
 .contador { display: block; margin-top: 0.2rem; text-align: right; color: var(--texto-suave); font-size: 0.85rem; }
 .aviso-rascunho { margin: 0 0 0.5rem; color: var(--verde-escuro-2); font-weight: 700; }
 .aviso-rascunho:empty { display: none; }
-#status-envio:focus, #titulo-historico:focus { outline: 3px solid var(--laranja-botao); outline-offset: 4px; }
+#status-envio:focus, #titulo-historico:focus { outline: 3px solid var(--laranja); outline-offset: 4px; }
 
 /* Histórico de mensagens salvas no localStorage */
 .container ul.historico { display: grid; gap: 1rem; max-width: 800px; margin: 1.5rem auto; list-style: none; }
@@ -46,6 +46,5 @@ input.invalido, select.invalido, textarea.invalido { border: 2px solid #B3261E; 
 .item-historico .detalhes { color: var(--texto-suave); font-size: 0.9rem; }
 .acoes-historico { text-align: center; }
 
-/* Tabela com rolagem horizontal em telas estreitas (página de acessibilidade) */
-.tabela-rolagem { max-width: 820px; margin: 0 auto; overflow-x: auto; }
-.tabela-rolagem caption { padding: 0.6rem; text-align: left; font-weight: 700; color: var(--verde-escuro); }
+/* ---------- Botões dentro dos cartões da área de apoio ---------- */
+.card .btn { margin-top: 1rem; }
