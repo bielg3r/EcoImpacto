@@ -12,9 +12,9 @@ Site educativo que mostra como hábitos do dia a dia afetam o meio ambiente e a 
 
 | Integrante | Papel |
 |---|---|
-| Diogo Mariano França da Silva | [preencher] |
-| Gabriel Rocha de Melo | [preencher] |
-| Matheus Fernando Garcia de Oliveira | [preencher] |
+| Diogo Mariano França da Silva | Código, slides |
+| Gabriel Rocha de Melo | Código e ReadMe |
+| Matheus Fernando Garcia de Oliveira | Código e Escopo |
 
 ## Contexto
 
