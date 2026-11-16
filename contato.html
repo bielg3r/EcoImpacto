@@ -7,10 +7,15 @@
   <title>EcoImpacto | Contato e Equipe</title>
   <link rel="stylesheet" href="teste.css">
   <link rel="stylesheet" href="paginas.css">
+  <!-- Botão flutuante de acessibilidade (tamanho do texto, alto contraste, destacar links) -->
+  <script src="acessibilidade.js" defer></script>
   <!-- JavaScript externo: validação, rascunho e histórico do formulário -->
   <script src="script.js" defer></script>
 </head>
 <body>
+  <!-- Acessibilidade: link que aparece ao apertar Tab e leva direto ao conteúdo principal -->
+  <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
+
   <!-- Menu igual ao da home; só muda o item com aria-current -->
   <header>
     <nav aria-label="Navegação principal">
@@ -30,7 +35,7 @@
     </nav>
   </header>
 
-  <main>
+  <main id="conteudo" tabindex="-1">
     <!-- Título da página, no mesmo estilo das páginas internas do teste.css -->
     <div class="container">
       <div class="page-heading">
@@ -168,6 +173,6 @@
 
   </main>
 
-  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026</footer>
+  <footer>Projeto Acadêmico UNICID - EcoImpacto 2026 | <a href="acessibilidade.html">Acessibilidade</a></footer>
 </body>
 </html>
