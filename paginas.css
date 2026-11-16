@@ -10,7 +10,7 @@ form { max-width: 800px; margin: 0 auto; padding: 1.5rem; background: var(--bran
 form label { display: block; margin: 1rem 0 0.3rem; font-weight: 700; color: var(--verde-escuro); }
 form input, form select, form textarea { width: 100%; padding: 0.6rem 0.8rem; font: inherit; color: var(--texto); background: var(--bege-claro); border: 1px solid var(--borda); border-radius: 10px; }
 button { padding: 0.7rem 1.4rem; font: inherit; font-weight: 700; cursor: pointer; color: var(--verde-escuro); background: var(--branco); border: 1px solid var(--verde-escuro-2); border-radius: 40px; }
-button.btn { color: var(--branco); background: var(--laranja); border: 0; }
+button.btn { color: var(--branco); background: var(--laranja-botao); border: 0; } /* #B34700 com branco = 5,5:1 (AA); o #F77F00 dava 2,6:1 */
 button.btn:hover { background: var(--laranja-escuro); }
 form p { margin-top: 1.5rem; }
 
@@ -48,3 +48,9 @@ input.invalido, select.invalido, textarea.invalido { border: 2px solid #B3261E; 
 
 /* ---------- Botões dentro dos cartões da área de apoio ---------- */
 .card .btn { margin-top: 1rem; }
+
+/* ---------- ODS (Objetivos de Desenvolvimento Sustentável) ---------- */
+.ods-selo { display: inline-block; margin-bottom: 0.6rem; padding: 0.3rem 1rem; color: var(--branco); background: var(--verde-escuro); border-radius: 40px; font-weight: 700; }
+.ods-link { margin-top: 0.4rem; }
+.dado-destaque { font-size: 2.4rem; font-weight: 800; color: var(--verde-escuro); line-height: 1.1; }
+.tabela-rolagem { overflow-x: auto; }
