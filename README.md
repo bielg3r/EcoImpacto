@@ -1,114 +1,90 @@
 # EcoImpacto – Sustentabilidade em Ação
 
-https://ecoimpacto.onrender.com/index.html
-      
-**Disciplina:** Front-End para Web
-**Professor:** Paulo Fratta
-**Integrantes:** Diogo Mariano França da Silva, Gabriel Rocha de Melo e Matheus Fernando Garcia de Oliveira
-**Data:** 21/09/2026
+Site educativo que mostra como hábitos do dia a dia afetam o meio ambiente e a sociedade, com um checklist que devolve dicas personalizadas.
 
----
+- **Site publicado (HTTPS):** https://ecoimpacto.onrender.com/index.html
+- **Repositório:** https://github.com/bielg3r/EcoImpacto
+- **Disciplina:** Desenvolvimento Front-End para Web · UNICID · 2026.2
+- **Professor:** Paulo Fratta
+- **Atividade:** AV A1, 2ª entrega (site final)
 
-## Contexto e Justificativa
+## Equipe
 
-O projeto EcoImpacto aborda a falta de conscientização sobre hábitos sustentáveis e seus impactos ambientais e sociais. O site tem como propósito ajudar os usuários a compreender como pequenas ações do dia a dia podem contribuir para a construção de um futuro mais sustentável.
+| Integrante | Papel |
+|---|---|
+| Diogo Mariano França da Silva | [preencher] |
+| Gabriel Rocha de Melo | [preencher] |
+| Matheus Fernando Garcia de Oliveira | [preencher] |
 
-## Objetivos
+## Contexto
 
-**Objetivo geral**
+O projeto aborda a falta de conscientização sobre hábitos sustentáveis e seus impactos ambientais e sociais. O público-alvo são estudantes, jovens e adultos, incluindo pessoas com deficiência. O site se relaciona com os ODS 11 (cidades e comunidades sustentáveis), 12 (consumo e produção responsáveis) e 13 (ação contra a mudança global do clima).
 
-Promover a conscientização ambiental e social por meio de conteúdo educativo e de um checklist interativo.
+## Páginas (11)
 
-**Objetivos específicos**
+| Página | Arquivo |
+|---|---|
+| Home | `index.html` |
+| Sobre (inclui ODS) | `sobre.html` |
+| Checklist sustentável | `check_list.html` |
+| Impacto ambiental e social | `Impacto_Ambiental_e_Social.html` |
+| Projetos sustentáveis | `Projetos_Sustententaveis.html` |
+| Galeria | `Galeria.html` |
+| Mídia (vídeo em iframe) | `Midia.html` |
+| Notícias | `Noticias.html` |
+| Pontos de coleta | `pontos_de_coleta.html` |
+| Contato, voluntariado e apoio | `contato.html` |
+| Acessibilidade | `acessibilidade.html` |
 
-- Incentivar a adoção de hábitos sustentáveis.
-- Informar sobre os impactos ambientais e sociais.
-- Apresentar projetos sustentáveis.
-- Disponibilizar conteúdo acessível para todos os usuários.
-- Fornecer recomendações personalizadas após o preenchimento do checklist.
+## Tecnologias
 
-## Público-Alvo
+HTML5, CSS3 (variáveis, Grid e Flexbox) e JavaScript puro, sem frameworks. Versionamento no GitHub e hospedagem no Render.
 
-O site é destinado a estudantes, jovens, adultos e pessoas interessadas em sustentabilidade e impacto social, incluindo pessoas com deficiência.
+## JavaScript
 
-## Escopo Funcional
+- `script.js`: checklist (dicas por resposta), formulário de contato com validação (`preventDefault`, mensagem de erro e borda em destaque), rascunho e histórico no `localStorage`, botão de compartilhar.
+- `acessibilidade.js`: botão flutuante (tamanho do texto, alto contraste, destaque de links), com a escolha salva no `localStorage`.
 
-O projeto contará com as seguintes páginas e seções:
+## Acessibilidade
 
-- Home
-- Sobre
-- Checklist Sustentável
-- Impacto Ambiental e Social
-- Projetos Sustentáveis
-- Galeria
-- Mídia
-- Notícias
-- Contato e Equipe
+`lang="pt-BR"`, texto alternativo nas imagens, contraste AA, navegação completa por teclado com foco visível, link "Pular para o conteúdo", `aria-live` nos resultados e página dedicada (`acessibilidade.html`). Detalhes e testes em `docs/testes.md`.
 
-## Requisitos Não Funcionais
+## Como rodar
 
-O desenvolvimento do site deverá considerar os seguintes requisitos:
+Não há dependências nem etapa de build.
 
-- **Acessibilidade:** navegação por teclado, contraste adequado, compatibilidade com leitores de tela e textos alternativos para imagens.
-- **Responsividade:** adaptação a diferentes tamanhos de tela e dispositivos.
-- **Desempenho:** carregamento eficiente das páginas.
-- **SEO básico:** aplicação de práticas essenciais para otimização nos mecanismos de busca.
-- **Otimização de imagens:** utilização de imagens adequadas para melhorar o desempenho do site.
+1. Clone o repositório: `git clone https://github.com/bielg3r/EcoImpacto.git`
+2. Abra `index.html` no navegador (ou use uma extensão como Live Server no VS Code).
 
-## Mapa do Site
+## Estrutura de pastas
 
-A estrutura de navegação seguirá a sequência abaixo:
+```
+EcoImpacto/
+├─ index.html … contato.html   (11 páginas)
+├─ teste.css                   (estilos base e variáveis)
+├─ paginas.css                 (estilos das páginas internas)
+├─ script.js                   (checklist e contato)
+├─ acessibilidade.js           (botão de acessibilidade)
+├─ Icones/                     (ilustrações SVG)
+├─ Prompts/                    (prints dos prompts de IA)
+├─ docs/                       (documentação)
+└─ README.md
+```
 
-Home → Sobre → Checklist Sustentável → Impacto Ambiental e Social → Projetos Sustentáveis → Galeria → Mídia → Notícias → Contato e Equipe.
+## Documentação (`/docs`)
 
-## Conteúdo e Identidade Visual
+| Arquivo | Conteúdo |
+|---|---|
+| `escopo.md` | Escopo atualizado, com planejado × entregue |
+| `plano_paginas.txt` | Plano de conteúdo das páginas (versão do MVP) |
+| `diario_de_bordo.md` | Diário datado de decisões e evidências |
+| `orcamento_hospedagem.html` | Orçamento e justificativa da hospedagem |
+| `testes.md` | Evidências de testes (W3C, contraste, links, teclado) |
+| `melhorias_mvp.md` | Pontos do MVP e como foram resolvidos |
+| `uso_de_ia.md` | Registro do uso de IA (prompts, aceito, corrigido) |
 
-A identidade visual do EcoImpacto será baseada em uma paleta de cores composta por tons de verde, branco e azul, transmitindo uma proposta relacionada à sustentabilidade e à preservação ambiental.
+## Fontes e créditos
 
-A linguagem utilizada será educativa e objetiva, com uma tipografia moderna e acessível, visando facilitar a leitura e a compreensão das informações apresentadas.
+Fotos da Galeria e da Mídia: Wikimedia Commons, com link para o arquivo original em cada legenda. Vídeo: PNUMA, no YouTube. Dado de reciclagem: ABRELPE, via O Povo (jun/2022). Informações da página de coleta: Prefeitura de São Paulo e Metrô, conforme listado na própria página. Os dados de contato do site são fictícios (trabalho acadêmico).
 
-## Tecnologias e Ferramentas
-
-As tecnologias e ferramentas previstas para o desenvolvimento são:
-
-- **HTML5:** estruturação das páginas.
-- **CSS3:** estilização e organização visual do site.
-- **JavaScript:** possibilidade de implementação de funcionalidades interativas em etapas futuras.
-- **Visual Studio Code:** ambiente de desenvolvimento.
-- **GitHub:** versionamento e armazenamento do projeto.
-
-## Cronograma e Divisão de Tarefas
-
-O desenvolvimento será organizado nas seguintes etapas:
-
-- **Etapa 1 – MVP e Escopo:** definição da versão inicial do projeto e de suas funcionalidades.
-- **Etapa 2 – Desenvolvimento das Páginas:** criação e estruturação das páginas do site.
-- **Etapa 3 – Funcionalidades e Validações:** implementação das funcionalidades previstas e verificação de seu funcionamento.
-- **Etapa 4 – Testes e Entrega Final:** realização de testes, ajustes necessários e preparação da entrega.
-
-## Riscos e Restrições
-
-Os principais riscos e restrições identificados são:
-
-- Prazo reduzido para o desenvolvimento.
-- Limitações técnicas da equipe.
-- Necessidade de alinhamento e comunicação entre os integrantes.
-
-## Critérios de Aceitação
-
-O projeto será considerado concluído quando atender aos seguintes critérios:
-
-- Site navegável e com páginas organizadas.
-- Conteúdo alinhado à proposta de sustentabilidade.
-- Recursos de acessibilidade aplicados.
-- Checklist sustentável funcional.
-- Documentação completa do projeto.
-
-## Aprovação
-
-**Responsável pela validação:** Paulo Sergio Fratta Junior
-
-**Data de aprovação:* __/__/____
-
-*EcoImpacto – Sustentabilidade em Ação*
-
+*EcoImpacto – Sustentabilidade em Ação · Projeto acadêmico UNICID 2026*
